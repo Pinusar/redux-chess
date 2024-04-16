@@ -23,6 +23,7 @@ export class ChessEngine extends GameEngine<ChessState, ChessMove> {
         }
 
         if (piece.type !== PieceType.EMPTY) {
+          // @ts-ignore
           const pieceValue = values[piece.symbol.toUpperCase()]
           if (piece.color === Color.WHITE) {
             result += pieceValue

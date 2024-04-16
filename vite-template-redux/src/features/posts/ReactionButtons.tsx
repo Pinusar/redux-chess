@@ -20,7 +20,7 @@ export function ReactionButtons(props: ReactionButtonProps) {
       key={emojiName} type="button" className="muted-button reaction-button"
       onClick={() => dispatch(reactionAdded({postId: post.id, reaction: emojiName}))}
     >
-      {emojiPic} {post.reactions[emojiName]}
+      {emojiPic}
     </button>
   })
 

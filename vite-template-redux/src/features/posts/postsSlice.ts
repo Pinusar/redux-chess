@@ -50,9 +50,6 @@ const postsSlice = createSlice({
     reactionAdded(state, action: PayloadAction<ReactionAddedPayload>) {
       const {postId, reaction} = action.payload
       const post = state.find(p => p.id === postId)
-      if (post) {
-        post.reactions[reaction]++
-      }
     }
   }
 });

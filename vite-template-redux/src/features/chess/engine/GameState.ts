@@ -40,6 +40,12 @@ export function fromBoard(board: string[][], activePlayer=Color.WHITE) {
   return {
     board: pieceBoard,
     enPassantCandidates: enPassantInfo,
+    hasWhiteARookMoved: false,
+    hasWhiteHRookMoved: false,
+    hasWhiteKingMoved: false,
+    hasBlackARookMoved: false,
+    hasBlackHRookMoved: false,
+    hasBlackKingMoved: false,
     activePlayer
   }
 }
