@@ -1,0 +1,8 @@
+.cellbutton {
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    margin: 0.1rem;
+    background-color: lightyellow;
+    border-radius: 5px;
+}
