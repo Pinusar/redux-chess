@@ -50,6 +50,7 @@ export class ChessEngine extends GameEngine<ChessState, ChessMove> {
         }
       }
     }
+    shuffleArray(result)
     return result;
   }
 
@@ -62,6 +63,13 @@ export class ChessEngine extends GameEngine<ChessState, ChessMove> {
     return {state: newState};
   }
 
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
 
 export interface ChessState {
