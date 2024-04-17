@@ -7,7 +7,7 @@ import { ChessEngine } from './engine/ChessEngine';
 let initialGameState = newGameState();
 const initialState : State  = {
   gameState: initialGameState,
-  twoPlayerModeEnabled: true,
+  twoPlayerModeEnabled: false,
   selectedCell: null,
   possibleMoveCells: [],
   computerMoveFrom: null,
