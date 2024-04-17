@@ -19,21 +19,10 @@ function App() {
           <div className="App">
             <Navbar />
             <Switch>
-              <Route
-                exact
-                path="/"
-                render={() => (
-                  <>
-                    <AddPostForm />
-                    <PostsList />
-                  </>
-                )}
-              />
-              <Route exact path="/posts/:postId" component={SinglePostPage} />
-              <Route exact path="/editPost/:postId" component={EditPostForm} />
-              <Route exact path="/Tictactoe" component={Tictactoe} />
-              <Route exact path="/Chess" component={Chess} />
-              <Redirect to="/" />
+                <Route exact path="/" component={Chess}/>
+                <Route exact path="/Tictactoe" component={Tictactoe}/>
+                <Route exact path="/Chess" component={Chess}/>
+                <Redirect to="/" />
             </Switch>
           </div>
         </Router>
