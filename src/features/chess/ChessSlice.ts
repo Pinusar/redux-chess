@@ -25,12 +25,17 @@ const chessSlice = createSlice(
         if (state.selectedCell != null && state.possibleMoveCells.includes(targetCell)) {
           let newState = playMove(state.gameState, state.selectedCell, targetCell);
 
+          // computer move
           if (!state.twoPlayerModeEnabled) {
+            const start = performance.now()
             const engine = new ChessEngine();
             const bestMove = engine.findBestMove({state: newState}, false, 3)
             newState = playMove(newState, bestMove.move.from, bestMove.move.to)
             state.computerMoveFrom = bestMove.move.from
             state.computerMoveTo = bestMove.move.to
+            const end = performance.now()
+            console.log(`engine took: ${end - start} ms`)
+
           }
 
           state.gameState = newState

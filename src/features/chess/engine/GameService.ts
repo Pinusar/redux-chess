@@ -42,7 +42,6 @@ export function isKingInCheck(gameState: GameState, activePlayer : Color) {
         let cell = i * 8 + i1;
         let possibleMoves = getAttackableSquares(gameState, cell);
         if (possibleMoves.includes(kingPosition)) {
-          console.log(`${activePlayer} king is in check by ${piece.type} on cell ${cell}`);
           return true;
         }
       }
