@@ -38,6 +38,18 @@ interface GameNode {
   children: GameNode[]
 }
 
+/*
+
+              Start
+        /      |              \
+   B (1)     C(3)              D(-8)
+     |          |  \               \
+ E(2) F(1)    G(-7) N(-3)           H(-8)  I(-1)
+              /  \      |                     \
+          J(-10) K(3)  O(7) P(-10)            L(7)
+                                                 \
+                                               M (-10)
+ */
 export const sampleGameState : TestGameState = {
   rootNode: {
     score: 3,
@@ -70,16 +82,28 @@ export const sampleGameState : TestGameState = {
               {
                 score: -10,
                 name: 'J',
-                children: [
-
-                ]
+                children: []
               },
               {
                 score: 3,
                 name: 'K',
-                children: [
-
-                ]
+                children: []
+              }
+            ]
+          },
+          {
+            score: -10,
+            name: 'N',
+            children: [
+              {
+                score: 7,
+                name: 'O',
+                children: []
+              },
+              {
+                score: -10,
+                name: 'P',
+                children: []
               }
             ]
           }
@@ -97,7 +121,19 @@ export const sampleGameState : TestGameState = {
           {
             score: -1,
             name: 'I',
-            children: []
+            children: [
+              {
+                score: 7,
+                name: 'L',
+                children: [
+                  {
+                    score: -10,
+                    name: 'M',
+                    children: []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

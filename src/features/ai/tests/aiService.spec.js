@@ -25,3 +25,11 @@ test("Should find best move when best move is immediately available", () => {
     expect(result.move.target).toEqual('X')
     expect(result.score).toEqual(20)
 });
+
+
+test("Should use alpha beta pruning", () => {
+    const simulator = new TestGameEngine();
+    const result = simulator.findBestMove(sampleGameState)
+
+    expect(simulator.counter).toEqual(11)
+});
